@@ -1,29 +1,92 @@
+/* General */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
-  background-color: #fff;
+  padding: 0;
+  background: #fff;
+  color: #555; /* Gray text for body */
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #4b0082; /* dark matte purple */
+  padding: 12px 0;
+  z-index: 1000;
+}
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+#navbar ul li {
+  margin: 0 20px;
+}
+#navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+#navbar ul li a:hover {
+  color: #9b30ff; /* lighter purple on hover */
+}
+
+/* Banner */
+#banner {
+  text-align: center;
+  padding: 160px 20px 80px 20px; /* leave space for fixed nav */
+  background: #f9f9f9;
+}
+#banner h1 {
+  font-size: 80px;
+  margin: 0;
+  color: #4b0082; /* dark matte purple */
+}
+#banner .full-name {
+  font-size: 24px;
+  margin: 10px 0;
   color: #333;
 }
-h2 {
-  color: #6a0dad;
-  border-bottom: 3px solid #6a0dad;
+#banner .tagline {
+  font-size: 18px;
+  color: #555; /* gray */
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+section h2 {
+  color: #000; /* black */
+  font-weight: bold;
+  border-bottom: 3px solid #4b0082; /* underline in dark purple */
   display: inline-block;
   padding-bottom: 5px;
+  margin-bottom: 15px;
 }
+
+/* Links */
 a {
-  color: #6a0dad;
-  text-decoration: none;
+  color: #4b0082;
 }
 a:hover {
   color: #9b30ff;
 }
-header#banner {
-  text-align: center;
-  padding: 40px 20px;
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
-header#banner .logo {
-  max-width: 150px;
-  display: block;
-  margin: 0 auto 15px;
+ul li {
+  margin: 8px 0;
+  color: #555; /* gray text */
+  font-weight: normal;
 }
