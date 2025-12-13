@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  color: #555; /* Gray text for body */
+  color: #555; /* gray body text */
   scroll-behavior: smooth;
 }
 
@@ -66,7 +66,7 @@ section {
 section h2 {
   color: #000; /* black */
   font-weight: bold;
-  border-bottom: 3px solid #4b0082; /* underline in dark purple */
+  border-bottom: 3px solid #4b0082; /* dark purple underline */
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 15px;
