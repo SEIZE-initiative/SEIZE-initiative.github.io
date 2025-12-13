@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+}
+h2 {
+  color: #6a0dad;
+  border-bottom: 3px solid #6a0dad;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+a {
+  color: #6a0dad;
+  text-decoration: none;
+}
+a:hover {
+  color: #9b30ff;
+}
+header#banner {
+  text-align: center;
+  padding: 40px 20px;
+}
+header#banner .logo {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 15px;
+}
