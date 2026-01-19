@@ -5,7 +5,7 @@ body {
   padding: 0;
   background: #fff;
   color: #555;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* this was fine */
 }
 
 /* Navigation */
@@ -39,17 +39,17 @@ body {
 /* Banner */
 #banner {
   text-align: center;
-  padding: 160px 20px 80px 20px;
+  padding: 180px 20px 100px 20px; /* more top space so logo isn't cut off */
   background: #f9f9f9;
 }
 #banner img {
-  max-width: 150px;
+  max-width: 250px; /* make the logo bigger */
   display: block;
   margin: 0 auto 20px auto;
 }
 #banner h1 {
   font-size: 80px;
-  margin: 0;
+  margin: 10px 0;
   color: #4b0082;
 }
 #banner .full-name {
@@ -119,7 +119,7 @@ ul li {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 35%; /* fine-tune face position inside circle */
   border-radius: 50%;
   display: block;
   margin: 0 auto 15px auto;
@@ -144,6 +144,36 @@ ul li {
   color: #777;
 }
 
+/* ===== Goals Section ===== */
+#goals {
+  background: #f0e6ff; /* light purple to stand out */
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+#goals h2 {
+  color: #4b0082;
+  border-bottom: 3px solid #4b0082;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+#goals .goal {
+  margin-bottom: 20px;
+}
+#goals h3 {
+  color: #4b0082;
+  margin-bottom: 8px;
+}
+#goals ul {
+  padding-left: 20px;
+}
+#goals ul li {
+  margin-bottom: 6px;
+  font-style: normal;
+  color: #555;
+}
+
 /* Mobile adjustments */
 @media (max-width: 500px) {
   #banner h1 {
@@ -154,6 +184,9 @@ ul li {
   }
   #banner .tagline {
     font-size: 16px;
+  }
+  #banner img {
+    max-width: 180px; /* smaller logo on small screens */
   }
   .member-card img {
     width: 120px;
