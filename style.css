@@ -5,7 +5,7 @@ body {
   padding: 0;
   background: #fff;
   color: #555;
-  scroll-behavior: smooth; /* this was fine */
+  scroll-behavior: smooth;
 }
 
 /* Navigation */
@@ -43,7 +43,8 @@ body {
   background: #f9f9f9;
 }
 #banner img {
-  max-width: 250px; /* make the logo bigger */
+  max-width: 250px; /* bigger logo */
+  height: auto;
   display: block;
   margin: 0 auto 20px auto;
 }
@@ -119,7 +120,7 @@ ul li {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  object-position: center 35%; /* fine-tune face position inside circle */
+  object-position: center 35%;
   border-radius: 50%;
   display: block;
   margin: 0 auto 15px auto;
@@ -146,7 +147,7 @@ ul li {
 
 /* ===== Goals Section ===== */
 #goals {
-  background: #f0e6ff; /* light purple to stand out */
+  background: #f4f4f4; /* gray box like member cards */
   padding: 20px 30px;
   border-radius: 12px;
   margin-top: 30px;
@@ -172,6 +173,25 @@ ul li {
   margin-bottom: 6px;
   font-style: normal;
   color: #555;
+}
+
+/* ===== Seminar Card ===== */
+.seminar-card {
+  background: #f4f4f4; /* match member & goal boxes */
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.seminar-card h3 {
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+.seminar-card p {
+  color: #555;
+  line-height: 1.5;
+}
+.seminar-card strong {
+  color: #4b0082;
 }
 
 /* Mobile adjustments */
