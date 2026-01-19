@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fff;
-  color: #555; /* gray body text */
+  color: #555;
   scroll-behavior: smooth;
 }
 
@@ -13,7 +13,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #4b0082; /* dark matte purple */
+  background: #4b0082;
   padding: 12px 0;
   z-index: 1000;
 }
@@ -33,19 +33,24 @@ body {
   font-weight: bold;
 }
 #navbar ul li a:hover {
-  color: #9b30ff; /* lighter purple on hover */
+  color: #9b30ff;
 }
 
 /* Banner */
 #banner {
   text-align: center;
-  padding: 160px 20px 80px 20px; /* leave space for fixed nav */
+  padding: 160px 20px 80px 20px;
   background: #f9f9f9;
+}
+#banner img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto 20px auto;
 }
 #banner h1 {
   font-size: 80px;
   margin: 0;
-  color: #4b0082; /* dark matte purple */
+  color: #4b0082;
 }
 #banner .full-name {
   font-size: 24px;
@@ -54,7 +59,7 @@ body {
 }
 #banner .tagline {
   font-size: 18px;
-  color: #555; /* gray */
+  color: #555;
 }
 
 /* Sections */
@@ -64,9 +69,9 @@ section {
   padding: 20px;
 }
 section h2 {
-  color: #000; /* black */
+  color: #000;
   font-weight: bold;
-  border-bottom: 3px solid #4b0082; /* dark purple underline */
+  border-bottom: 3px solid #4b0082;
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 15px;
@@ -87,11 +92,29 @@ ul {
 }
 ul li {
   margin: 8px 0;
-  color: #555; /* gray text */
+  color: #555;
   font-weight: normal;
 }
-/* ===== Members photos size fix ===== */
 
+/* ===== Members Section ===== */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.member-card {
+  text-align: center;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.member-card:hover {
+  transform: translateY(-5px);
+}
 .member-card img {
   width: 140px;
   height: 140px;
@@ -100,4 +123,39 @@ ul li {
   display: block;
   margin: 0 auto 15px auto;
 }
+.member-card h3 {
+  margin: 10px 0 5px 0;
+  color: #4b0082;
+}
+.member-card .role {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+.member-card .affiliation {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+.member-card .description {
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+}
 
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  #banner h1 {
+    font-size: 50px;
+  }
+  #banner .full-name {
+    font-size: 20px;
+  }
+  #banner .tagline {
+    font-size: 16px;
+  }
+  .member-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
