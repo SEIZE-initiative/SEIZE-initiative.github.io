@@ -1,4 +1,6 @@
-/* General */
+/* =======================
+   General
+======================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -8,7 +10,9 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navigation */
+/* =======================
+   Navigation
+======================= */
 #navbar {
   position: fixed;
   top: 0;
@@ -17,6 +21,7 @@ body {
   padding: 12px 0;
   z-index: 1000;
 }
+
 #navbar ul {
   list-style: none;
   display: flex;
@@ -24,45 +29,56 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #navbar ul li {
   margin: 0 20px;
 }
+
 #navbar ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
+
 #navbar ul li a:hover {
   color: #9b30ff;
 }
 
-/* Banner */
+/* =======================
+   Banner
+======================= */
 #banner {
   text-align: center;
-  padding: 100px 20px 50px 20px; /* smaller top padding since logo removed */
+  padding: 100px 20px 50px 20px;
   background: #f9f9f9;
 }
+
 #banner h1 {
   font-size: 80px;
   margin: 10px 0;
   color: #4b0082;
 }
+
 #banner .full-name {
   font-size: 24px;
   margin: 10px 0;
   color: #333;
 }
+
 #banner .tagline {
   font-size: 18px;
   color: #555;
 }
 
-/* Sections */
+/* =======================
+   Sections
+======================= */
 section {
   max-width: 900px;
   margin: 50px auto;
   padding: 20px;
 }
+
 section h2 {
   color: #000;
   font-weight: bold;
@@ -72,32 +88,40 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Links */
+/* =======================
+   Links
+======================= */
 a {
   color: #4b0082;
 }
+
 a:hover {
   color: #9b30ff;
 }
 
-/* Lists */
+/* =======================
+   Lists
+======================= */
 ul {
   list-style-type: none;
   padding-left: 0;
 }
+
 ul li {
   margin: 8px 0;
   color: #555;
-  font-weight: normal;
 }
 
-/* Members Section */
+/* =======================
+   Members Section
+======================= */
 .members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
+
 .member-card {
   text-align: center;
   background: #f4f4f4;
@@ -106,9 +130,11 @@ ul li {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
+
 .member-card:hover {
   transform: translateY(-5px);
 }
+
 .member-card img {
   width: 140px;
   height: 140px;
@@ -118,33 +144,40 @@ ul li {
   display: block;
   margin: 0 auto 15px auto;
 }
+
 .member-card h3 {
   margin: 10px 0 5px 0;
   color: #4b0082;
 }
+
 .member-card .role {
   font-weight: bold;
   color: #333;
   margin-bottom: 5px;
 }
+
 .member-card .affiliation {
   font-size: 14px;
   color: #555;
   margin-bottom: 5px;
 }
+
 .member-card .description {
   font-size: 14px;
   font-style: italic;
   color: #777;
 }
 
-/* Goals Section */
+/* =======================
+   Goals Section
+======================= */
 #goals {
   background: #f4f4f4;
   padding: 20px 30px;
   border-radius: 12px;
   margin-top: 30px;
 }
+
 #goals h2 {
   color: #4b0082;
   border-bottom: 3px solid #4b0082;
@@ -152,42 +185,52 @@ ul li {
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
+
 #goals .goal {
   margin-bottom: 20px;
 }
+
 #goals h3 {
   color: #4b0082;
   margin-bottom: 8px;
 }
+
 #goals ul {
   padding-left: 20px;
 }
+
 #goals ul li {
   margin-bottom: 6px;
-  font-style: normal;
   color: #555;
 }
 
-/* Seminar Card */
+/* =======================
+   Seminar Card
+======================= */
 .seminar-card {
   background: #f4f4f4;
   padding: 20px 25px;
   border-radius: 12px;
   margin-top: 20px;
 }
+
 .seminar-card h3 {
   color: #4b0082;
   margin-bottom: 10px;
 }
+
 .seminar-card p {
   color: #555;
   line-height: 1.5;
 }
+
 .seminar-card strong {
   color: #4b0082;
 }
 
-/* Contact Section */
+/* =======================
+   Contact Section
+======================= */
 #contact .contact-container {
   display: flex;
   justify-content: space-between;
@@ -197,36 +240,64 @@ ul li {
   padding: 20px;
   border-radius: 12px;
 }
+
 #contact .contact-container .emails {
   flex: 1 1 60%;
 }
+
 #contact .contact-container .logo {
   flex: 1 1 30%;
   text-align: right;
 }
+
 #contact .contact-container .logo img {
   max-width: 300px;
   height: auto;
 }
 
-/* Mobile adjustments */
+/* =======================
+   Mobile Adjustments
+======================= */
 @media (max-width: 500px) {
+
+  /* NAVBAR FIX */
+  #navbar ul {
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  #navbar ul li {
+    margin: 6px 12px;
+  }
+
+  #navbar ul li a {
+    font-size: 14px;
+  }
+
+  /* Banner */
   #banner h1 {
     font-size: 50px;
   }
+
   #banner .full-name {
     font-size: 20px;
   }
+
   #banner .tagline {
     font-size: 16px;
   }
+
+  /* Members */
   .member-card img {
     width: 120px;
     height: 120px;
   }
+
+  /* Contact */
   #contact .contact-container {
     flex-direction: column;
   }
+
   #contact .contact-container .logo {
     text-align: center;
     margin-top: 15px;
