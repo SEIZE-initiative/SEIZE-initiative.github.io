@@ -347,3 +347,40 @@ ul li {
 .program-btn:hover {
   background-color: #6a0dad;
 }
+/* =======================
+   Seminar Buttons
+======================= */
+
+.seminar-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px; /* space between buttons */
+  flex-wrap: wrap;
+}
+
+.program-btn,
+.register-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  color: white;
+}
+
+.program-btn {
+  background-color: #4b0082;
+}
+
+.program-btn:hover {
+  background-color: #6a0dad;
+}
+
+.register-btn {
+  background-color: #2a6f97;
+}
+
+.register-btn:hover {
+  background-color: #1b4f72;
+}
