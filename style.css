@@ -1,4 +1,4 @@
-/* Reset & basic styles */
+/* ======================= General ======================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,24 +6,30 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fefefe;
+  color: #555;
+  background-color: #fff;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #4b0082;
 }
 
-/* NAVBAR */
+a:hover {
+  color: #9b30ff;
+}
+
+/* ======================= Navigation ======================= */
 #navbar {
-  background-color: #004080;
-  padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 100;
+  width: 100%;
+  background: #4b0082;
+  padding: 12px 0;
+  z-index: 1000;
 }
 
 #navbar ul {
@@ -31,216 +37,302 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  margin: 0 20px;
 }
 
 #navbar ul li a {
   color: #fff;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
 #navbar ul li a:hover {
-  color: #ffcc00;
+  color: #9b30ff;
 }
 
-/* BANNER */
+/* ======================= Banner ======================= */
 #banner {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/banner.jpg') center/cover no-repeat;
-  color: #fff;
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 100px 20px 50px 20px;
+  background: #f9f9f9 url('assets/images/banner.jpg') center/cover no-repeat;
 }
 
 #banner h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 80px;
+  margin: 10px 0;
+  color: #4b0082;
 }
 
 #banner .full-name {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
 }
 
 #banner .tagline {
-  font-size: 1.2rem;
+  font-size: 18px;
+  color: #555;
   font-style: italic;
-  margin-top: 0.5rem;
 }
 
-/* SECTION HEADINGS */
+/* ======================= Sections ======================= */
 section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
 section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #004080;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #4b0082;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-/* GOALS */
+/* ======================= Goals Section ======================= */
+#goals {
+  background: #f4f4f4;
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+#goals h2 {
+  color: #4b0082;
+  border-bottom: 3px solid #4b0082;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
 #goals .goal {
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 #goals h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  color: #0066cc;
+  color: #4b0082;
+  margin-bottom: 8px;
 }
 
 #goals ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 20px;
 }
 
-/* MEMBERS & COLLABORATORS GRIDS */
+#goals ul li {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* ======================= Members & Collaborators Grids ======================= */
 .members-grid,
 .collaborators-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 30px;
 }
 
 .member-card,
 .collab-card {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
 }
 
 .member-card:hover,
 .collab-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .member-card img,
 .collab-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  object-position: center 35%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
 }
 
 .member-card h3,
 .collab-card h3 {
-  color: #004080;
-  margin-bottom: 0.5rem;
+  margin: 10px 0 5px 0;
+  color: #4b0082;
 }
 
 .role {
   font-weight: bold;
-  color: #0066cc;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .affiliation {
-  font-style: italic;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
 }
 
 .description {
-  font-size: 0.9rem;
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
 }
 
-/* SEMINARS */
+/* ======================= Seminar Card ======================= */
 .seminar-card {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  background: #f4f4f4;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  position: relative;
 }
 
 .seminar-card h3 {
-  color: #004080;
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+.seminar-card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.seminar-card strong {
+  color: #4b0082;
+}
+
+/* ======================= Seminar Status Labels ======================= */
+.seminar-card .status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.seminar-card.upcoming .status {
+  background-color: #4b0082;
+  color: #fff;
+}
+
+.seminar-card.past .status {
+  background-color: #ccc;
+  color: #555;
+}
+
+/* ======================= Contact Section ======================= */
+#contact .contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#contact .contact-container .emails {
+  flex: 1 1 60%;
+}
+
+#contact .contact-container .emails p {
   margin-bottom: 0.5rem;
 }
 
-.seminar-card .status {
-  background-color: #ffcc00;
-  color: #004080;
-  font-weight: bold;
-  padding: 0.2rem 0.5rem;
-  border-radius: 5px;
-  font-size: 0.8rem;
+#contact .contact-container .emails a {
+  color: #4b0082;
 }
 
-.seminar-card ul {
-  margin-top: 1rem;
-  list-style-type: square;
-  padding-left: 1.5rem;
+#contact .contact-container .logo {
+  flex: 1 1 30%;
+  text-align: right;
 }
 
-.seminar-buttons {
-  margin-top: 1rem;
+#contact .contact-container .logo img {
+  max-width: 300px;
+  height: auto;
 }
 
+/* ======================= Program Button ======================= */
 .program-btn {
-  background-color: #004080;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background-color: #4b0082;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.2s;
 }
 
 .program-btn:hover {
-  background-color: #0066cc;
+  background-color: #6a0dad;
 }
 
-/* CONTACT */
-.contact-container {
+.seminar-buttons {
+  margin-top: 12px;
   display: flex;
+  gap: 10px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
 }
 
-.contact-container .emails {
-  flex: 1 1 300px;
-}
-
-.contact-container .emails p {
-  margin-bottom: 0.5rem;
-}
-
-.contact-container .emails a {
-  color: #004080;
-}
-
-.contact-container .logo {
-  flex: 1 1 200px;
-  text-align: center;
-}
-
-.contact-container .logo img {
-  max-width: 150px;
-  border-radius: 10px;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px){
+/* ======================= Mobile Adjustments ======================= */
+@media (max-width: 500px) {
+  /* Navbar */
   #navbar ul {
-    flex-direction: column;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 10px;
   }
 
-  #banner {
-    padding: 4rem 1rem;
+  #navbar ul li {
+    margin: 0 6px;
   }
 
-  .contact-container {
+  #navbar ul li a {
+    font-size: 13px;
+  }
+
+  /* Banner */
+  #banner h1 {
+    font-size: 50px;
+  }
+
+  #banner .full-name {
+    font-size: 20px;
+  }
+
+  #banner .tagline {
+    font-size: 16px;
+  }
+
+  /* Members & Collaborators */
+  .member-card img,
+  .collab-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Contact */
+  #contact .contact-container {
     flex-direction: column;
+  }
+
+  #contact .contact-container .logo {
+    text-align: center;
+    margin-top: 15px;
   }
 }
