@@ -1,23 +1,17 @@
 /* ======================= General ======================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #fff;
   color: #555;
-  background-color: #fff;
   scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
   color: #4b0082;
+  text-decoration: none;
 }
-
 a:hover {
   color: #9b30ff;
 }
@@ -36,7 +30,6 @@ a:hover {
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -58,7 +51,7 @@ a:hover {
 #banner {
   text-align: center;
   padding: 100px 20px 50px 20px;
-  background: #f9f9f9 url('assets/images/banner.jpg') center/cover no-repeat;
+  background: #f9f9f9;
 }
 
 #banner h1 {
@@ -76,7 +69,6 @@ a:hover {
 #banner .tagline {
   font-size: 18px;
   color: #555;
-  font-style: italic;
 }
 
 /* ======================= Sections ======================= */
@@ -93,6 +85,98 @@ section h2 {
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 15px;
+}
+
+/* ======================= Members Section ======================= */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 top / 2 bottom */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.member-card {
+  text-align: center;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.member-card h3 {
+  margin: 10px 0 5px 0;
+  color: #4b0082;
+}
+
+.member-card .role {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.member-card .affiliation {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.member-card .description {
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+}
+
+/* ======================= Collaborators Section ======================= */
+.collaborators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.collab-card {
+  text-align: center;
+  background: #f4f4f4;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.collab-card:hover {
+  transform: translateY(-5px);
+}
+
+.collab-card h3 {
+  color: #4b0082;
+  margin-bottom: 5px;
+}
+
+.collab-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.collab-card .affiliation {
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
 }
 
 /* ======================= Goals Section ======================= */
@@ -129,66 +213,7 @@ section h2 {
   color: #555;
 }
 
-/* ======================= Members & Collaborators Grids ======================= */
-.members-grid,
-.collaborators-grid {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 30px;
-}
-
-.member-card,
-.collab-card {
-  text-align: center;
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.member-card:hover,
-.collab-card:hover {
-  transform: translateY(-5px);
-}
-
-.member-card img,
-.collab-card img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  object-position: center 35%;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px auto;
-}
-
-.member-card h3,
-.collab-card h3 {
-  margin: 10px 0 5px 0;
-  color: #4b0082;
-}
-
-.role {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.affiliation {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.description {
-  font-size: 14px;
-  font-style: italic;
-  color: #777;
-}
-
-/* ======================= Seminar Card ======================= */
+/* ======================= Seminar Cards ======================= */
 .seminar-card {
   background: #f4f4f4;
   padding: 20px 25px;
@@ -207,11 +232,6 @@ section h2 {
   line-height: 1.5;
 }
 
-.seminar-card strong {
-  color: #4b0082;
-}
-
-/* ======================= Seminar Status Labels ======================= */
 .seminar-card .status {
   display: inline-block;
   font-size: 12px;
@@ -232,40 +252,6 @@ section h2 {
   color: #555;
 }
 
-/* ======================= Contact Section ======================= */
-#contact .contact-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-#contact .contact-container .emails {
-  flex: 1 1 60%;
-}
-
-#contact .contact-container .emails p {
-  margin-bottom: 0.5rem;
-}
-
-#contact .contact-container .emails a {
-  color: #4b0082;
-}
-
-#contact .contact-container .logo {
-  flex: 1 1 30%;
-  text-align: right;
-}
-
-#contact .contact-container .logo img {
-  max-width: 300px;
-  height: auto;
-}
-
-/* ======================= Program Button ======================= */
 .program-btn {
   display: inline-block;
   margin-top: 12px;
@@ -282,26 +268,42 @@ section h2 {
   background-color: #6a0dad;
 }
 
-.seminar-buttons {
-  margin-top: 12px;
+/* ======================= Contact Section ======================= */
+#contact .contact-container {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#contact .contact-container .emails {
+  flex: 1 1 60%;
+}
+
+#contact .contact-container .logo {
+  flex: 1 1 30%;
+  text-align: right;
+}
+
+#contact .contact-container .logo img {
+  max-width: 300px;
+  height: auto;
 }
 
 /* ======================= Mobile Adjustments ======================= */
-@media (max-width: 500px) {
-  /* Navbar */
+@media (max-width: 768px) {
+  /* Navbar fix */
   #navbar ul {
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 0 10px;
   }
-
   #navbar ul li {
     margin: 0 6px;
   }
-
   #navbar ul li a {
     font-size: 13px;
   }
@@ -310,29 +312,30 @@ section h2 {
   #banner h1 {
     font-size: 50px;
   }
-
   #banner .full-name {
     font-size: 20px;
   }
-
   #banner .tagline {
     font-size: 16px;
   }
 
-  /* Members & Collaborators */
-  .member-card img,
-  .collab-card img {
-    width: 120px;
-    height: 120px;
+  /* Members */
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Contact */
   #contact .contact-container {
     flex-direction: column;
   }
-
   #contact .contact-container .logo {
     text-align: center;
     margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .members-grid {
+    grid-template-columns: 1fr;
   }
 }
