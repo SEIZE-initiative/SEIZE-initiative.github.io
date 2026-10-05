@@ -353,28 +353,32 @@ section h2 {
 }
 
 /* logo side */
-#contact .contact-logo {
+#contact .logo {
   flex: 0 0 auto;
 }
 
-#contact .contact-logo img {
-  width: 90px;   /* clean and controlled size */
+#contact .logo img {
+  width: 90px;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-/* mobile fix */
+/* mobile */
 @media (max-width: 768px) {
   #contact .contact-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  #contact .contact-logo img {
+  #contact .logo {
+    align-self: center;
+    margin-top: 15px;
+  }
+
+  #contact .logo img {
     width: 80px;
   }
-}
 /* ======================= Mobile Adjustments ======================= */
 @media (max-width: 768px) {
   /* Navbar fix */
